@@ -2,7 +2,7 @@
 
 ![Image of the fully assembled keyboard](img/banner.jpg)
 
-It all started with a [Talk by ink](https://media.ccc.de/v/gpn22-498-tastaturen-ein-drama-mit-10-fingern) at GPN22, which inspired me to build my own customized split keyboard. This one is fitted to the exact size of my hands and features a 36 key layout.
+It all started with a [Talk by ink](https://media.ccc.de/v/gpn22-498-tastaturen-ein-drama-mit-10-fingern) at GPN22, which inspired me to build my own customized wireless split keyboard. This one is fitted to the exact size of my hands and features a 36 key layout.
 
 ## Layout
 
@@ -13,6 +13,10 @@ I used [ergopad](https://pashutk.com/ergopad/) to determine the exact poitions o
 ![Alpha Layer Keymap](keymap/img/alpha-layer.png)
 
 For more details, see the [keymap README](keymap/README.md).
+
+## Controller & Display
+
+[nice!nano](https://nicekeyboards.com/nice-nano/) and [nice!view](https://nicekeyboards.com/nice-view).
 
 ## Switches
 
