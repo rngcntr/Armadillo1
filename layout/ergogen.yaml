@@ -1,0 +1,315 @@
+units:
+  kx: u
+  ky: u
+  px: kx + 2
+  py: ky + 2
+  mx: 14
+  my: 14
+  shiftx: 100
+  shifty: -100
+points:
+  rotate: 0
+  zones:
+    matrix:
+      anchor:
+        shift: [shiftx, shifty]
+      key:
+        padding: 1ky
+        spread: 1kx
+      columns:
+        inner:
+          key:
+            splay: 6
+            column_net: P5
+        index:
+          key:
+            stagger: 0
+            splay: -3
+            spread: 1.05u
+            column_net: P6
+        middle:
+          key:
+            stagger: 10
+            splay: -3
+            spread: 1.05u
+            column_net: P7
+        ring:
+          key:
+            stagger: -4
+            splay: -2
+            spread: 1.05u
+            column_net: P8
+        pinky:
+          key:
+            stagger: -12
+            splay: -5
+            spread: 1.03u
+            column_net: P9
+      rows:
+        bottom:
+          row_net: P2
+        home:
+          row_net: P0
+        top:
+          row_net: P1
+    thumb:
+      rotate: 30
+      key:
+        padding: 1ky
+        spread: 1kx
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-5ky, -2.6ky]
+      columns:
+        space:
+          key:
+            height: 1.5ky
+            shift: [0,0.25ky]
+            column_net: P5
+        layer:
+          key:
+            splay: -16
+            shift: [4,-2]
+            column_net: P6
+        mod:
+          key:
+            splay: -16
+            shift: [8.5,-3]
+            column_net: P7
+      rows:
+        cluster:
+          row_net: P3
+outlines:
+  keys:
+  - what: rectangle
+    where: true
+    bound: false
+    size: [kx-0.1,ky-0.1]
+  mounts:
+  - what: rectangle
+    where: true
+    bound: false
+    size: [mx, my]
+  boardController:
+  - what: polygon
+    operation: stack
+    fillet: 4
+    points:
+      - ref: matrix_inner_top
+        shift: [-1.54px, 0.5py]
+      - ref: matrix_index_top
+        shift: [0px, 0.5py]
+      - ref: matrix_index_bottom
+        shift: [0px, -0.5py]
+      - ref: thumb_space_cluster
+        shift: [0.5px, -0.75py]
+      - ref: thumb_space_cluster
+        shift: [-0.5px, -0.75py]
+      - ref: thumb_space_cluster
+        shift: [-0.5px, 0.75py]
+      - ref: matrix_inner_bottom
+        shift: [-1.54px, -0.5py]
+  xlBoardController:
+  - what: polygon
+    operation: stack
+    fillet: 4
+    points:
+      - ref: matrix_inner_top
+        shift: [-1.64px, 0.6py]
+      - ref: matrix_index_top
+        shift: [0px, 0.6py]
+      - ref: matrix_index_bottom
+        shift: [0px, -0.6py]
+      - ref: thumb_space_cluster
+        shift: [0.6px, -0.85py]
+      - ref: thumb_space_cluster
+        shift: [-0.6px, -0.85py]
+      - ref: thumb_space_cluster
+        shift: [-0.6px, 0.85py]
+      - ref: matrix_inner_bottom
+        shift: [-1.64px, -0.6py]
+  boardSwitches:
+  - what: polygon
+    operation: stack
+    fillet: 4
+    points:
+      - ref: matrix_inner_top
+        shift: [-0.5px, 0.5py]
+      - ref: matrix_index_top
+        shift: [0.25px, 0.5py]
+      - ref: matrix_middle_top
+        shift: [-0.5px, 0.5py]
+      - ref: matrix_middle_top
+        shift: [0.5px, 0.5py]
+      - ref: matrix_ring_top
+        shift: [-0.2px, 0.5py]
+      - ref: matrix_ring_top
+        shift: [0.5px, 0.5py]
+      - ref: matrix_pinky_top
+        shift: [-0.25px, 0.5py]
+      - ref: matrix_pinky_top
+        shift: [0.5px, 0.5py]
+      - ref: matrix_pinky_bottom
+        shift: [0.5px, -0.5py]
+      - ref: matrix_pinky_bottom
+        shift: [-0.5px, -0.5py]
+      - ref: matrix_ring_bottom
+        shift: [-0.5px, -1py]
+      - ref: thumb_mod_cluster
+        shift: [0.5px, -0.5py]
+      - ref: thumb_layer_cluster
+        shift: [0.5px, -0.5py]
+      - ref: thumb_layer_cluster
+        shift: [-0.5px, -0.5py]
+      - ref: thumb_space_cluster
+        shift: [-0.5px, -0.75py]
+      - ref: thumb_space_cluster
+        shift: [-0.5px, 0.75py]
+      - ref: matrix_inner_bottom
+        shift: [-0.5px, -0.25py]
+  xlBoardSwitches:
+  - what: polygon
+    operation: stack
+    fillet: 6
+    points:
+      - ref: matrix_inner_top
+        shift: [-0.6px, 0.6py]
+      - ref: matrix_index_top
+        shift: [0.15px, 0.6py]
+      - ref: matrix_middle_top
+        shift: [-0.6px, 0.6py]
+      - ref: matrix_middle_top
+        shift: [0.6px, 0.6py]
+      - ref: matrix_ring_top
+        shift: [-0.3px, 0.6py]
+      - ref: matrix_ring_top
+        shift: [0.6px, 0.6py]
+      - ref: matrix_pinky_top
+        shift: [-0.15px, 0.6py]
+      - ref: matrix_pinky_top
+        shift: [0.6px, 0.6py]
+      - ref: matrix_pinky_bottom
+        shift: [0.6px, -0.6py]
+      - ref: matrix_pinky_bottom
+        shift: [-0.6px, -0.6py]
+      - ref: matrix_ring_bottom
+        shift: [-0.4px, -1.1py]
+      - ref: thumb_mod_cluster
+        shift: [0.6px, -0.6py]
+      - ref: thumb_layer_cluster
+        shift: [0.6px, -0.6py]
+      - ref: thumb_layer_cluster
+        shift: [-0.6px, -0.6py]
+      - ref: thumb_space_cluster
+        shift: [-0.6px, -0.85py]
+      - ref: thumb_space_cluster
+        shift: [-0.6px, 0.85py]
+      - ref: matrix_inner_bottom
+        shift: [-0.6px, -0.35py]
+  boardAll:
+  - name: boardSwitches
+  - operation: add
+    name: boardController
+  xlBoardAll:
+  - name: xlBoardSwitches
+  - operation: add
+    name: xlBoardController
+  combo:
+  - name: boardAll
+  - operation: subtract
+    name: keys
+  switch-plate:
+  - name: boardSwitches
+  - operation: subtract
+    name: mounts
+cases:
+  bottom:
+  - name: boardAll
+    extrude: 1
+  xlBottom:
+  - name: xlBoardAll
+    extrude: 1
+  _outerWall:
+  - name: xlBoardAll
+    extrude: 4
+  _innerWall:
+  - name: boardAll
+    extrude: 4
+  wall:
+  - what: case
+    name: _outerWall
+    operation: add
+  - what: case
+    name: _innerWall
+    operation: subtract
+  case:
+  - what: case
+    name: xlBottom
+    operation: add
+  - what: case
+    name: wall
+    operation: add
+pcbs:
+  single-half:
+    template: kicad8
+    outlines:
+      main:
+        outline: boardController
+    footprints:
+      mx-hotswap:
+        what: mx
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      nice-nano:
+        what: ceoloide/mcu_nice_nano
+        where:
+          ref: matrix_inner_top
+          shift: [-1.05u,-0.32u]
+        params:
+          reversible: true
+      nicw-view:
+        what: ceoloide/display_nice_view
+        where:
+          ref: matrix_inner_top
+          shift: [-1.05u,-0.65u]
+        params:
+          VCC: VCC
+          MOSI: P16
+          CS: P4
+          SCK: P15
+          GND: GND
+          reversible: true
+          invert_jumpers_position: false
+      power:
+        what: ceoloide/power_switch_smd_side
+        where:
+          ref: matrix_inner_top
+          shift: [-1.62u,-1.9u]
+          rotate: 180
+        params:
+          from: BAT_P
+          to: RAW
+          reversible: true
+      battery:
+        what: ceoloide/battery_connector_jst_ph_2
+        where:
+          ref: matrix_inner_top
+          shift: [-1.3u,-1.9u]
+          rotate: 90
+        params:
+          BAT_P: BAT_P
+          BAT_N: GND
+          reversible: true
